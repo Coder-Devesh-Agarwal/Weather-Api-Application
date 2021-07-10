@@ -1,0 +1,109 @@
+body {
+  color: rgb(70, 70, 70);
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Oswald";
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.cmain {
+  color: rgb(70, 70, 70);
+  font-family: "Oswald";
+  flex-grow: 1;
+  text-align: center;
+}
+.cmain a {
+  text-decoration: underline;
+  color: rgb(70, 70, 70);
+}
+.header {
+  font-family: "Oswald";
+}
+#title {
+  font-size: 5rem;
+  text-align: center;
+}
+.footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  color: #555;
+  font-size: 1.2rem;
+}
+.ico {
+  padding: 1rem 1rem;
+  text-align: center;
+}
+.ico img {
+  height: 5rem;
+  width: 5rem;
+}
+
+#location {
+  margin: 1rem 0.5rem;
+  font-size: 1.5rem;
+}
+#info {
+  white-space: pre-line;
+  transform: translate(50%, 0%);
+  font-size: 1rem;
+  width: 50%;
+}
+/* ------------------------------------------------------------------- */
+/* This Is The Code For Fashion */
+/* ------------------------------------------------------------------- */
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: #ca4246;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    45deg,
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text-simple-animation-rev 0.5s ease forwards;
+}
+
+.gradient-text:hover {
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  40% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}
+/* ------------------------------------------------------------------- */
+/* This Is The End Of The Code For Fashion */
+/* ------------------------------------------------------------------- */
