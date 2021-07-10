@@ -6,6 +6,8 @@ const geocode = require("./utils/geocode");
 const weather = require("./utils/weather-forcast");
 
 const app = express();
+const port = process.env.PORT || 3000;
+
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather",
@@ -89,6 +91,6 @@ app.get("*", (req, res) => {
     content: "Oops!Page Not Found.",
   });
 });
-app.listen(3000, () => {
-  console.log("The Server Is Starting Up At Port 3000.");
+app.listen(port, () => {
+  console.log(`The Server Is Starting Up At Port ${port}.`);
 });

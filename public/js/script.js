@@ -21,17 +21,15 @@ weForm.addEventListener("submit", (e) => {
   const location = search.value;
   msgOne.textContent = "Loading weather...";
   msgTwo.textContent = "";
-  fetch(`http://localhost:3000/weather?address=${location}`).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.error) {
-          msgTwo.textContent = data.error;
-        } else {
-          const dat = data.address;
-          msgOne.textContent = dat.toUpperCase();
-          msgTwo.textContent = data.weather_news;
-        }
-      });
-    }
-  );
+  fetch(`/weather?address=${location}`).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        msgTwo.textContent = data.error;
+      } else {
+        const dat = data.address;
+        msgOne.textContent = dat.toUpperCase();
+        msgTwo.textContent = data.weather_news;
+      }
+    });
+  });
 });
