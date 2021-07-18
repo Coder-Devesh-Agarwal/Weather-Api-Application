@@ -44,7 +44,7 @@ body {
   margin: 1rem 0.5rem;
   font-size: 1.5rem;
 }
-#info {
+.info {
   white-space: pre-line;
   transform: translate(50%, 0%);
   font-size: 1rem;

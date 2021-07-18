@@ -21,17 +21,17 @@ const weather = function (longitude, latitude, callback) {
       // Overall The Weather Description Is ${body.current.weather_descriptions[0]}`
       //       )
       //     );
-      callback(
-        undefined,
-        `HEY BUDDY😀!!
+      callback(undefined, {
+        forecast: `HEY BUDDY😀!!
       What's Up in :${body.location.region},${body.location.country}
       The Current Temperature is :${body.current.temperature}
       Chances of 🌧 Rain are ${body.current.precip}%,
-      There Is Humidity is ${body.current.humidity}%,
+      There Is ${body.current.humidity}% Humidity,
       The Current 💨Wind Speed is ${body.current.wind_speed}
       Go With A Pair of 😎 Sunglasses As The UV Index is ${body.current.uv_index}.
-      ▶▶Overall The Weather Description Is ${body.current.weather_descriptions[0]}◀◀`
-      );
+      ▶▶Overall The Weather Description Is ${body.current.weather_descriptions[0]}◀◀`,
+        wimg: body.current.weather_icons,
+      });
     }
   });
 };

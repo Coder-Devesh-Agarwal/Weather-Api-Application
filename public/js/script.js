@@ -11,13 +11,14 @@ console.log("Client Side Javascript.");
   });
 });*/
 const msgOne = document.querySelector("#location");
-const msgTwo = document.querySelector("#info");
+const msgTwo = document.querySelector(".info");
 const search = document.querySelector("input");
 const weForm = document.querySelector("form");
+const weather_image = document.getElementById("wimg");
 msgOne.textContent = "Enter A Location🎴";
 weForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  //   console.log("testing!");
+  // console.log("testing!");
   const location = search.value;
   msgOne.textContent = "Loading weather...";
   msgTwo.textContent = "";
@@ -29,6 +30,8 @@ weForm.addEventListener("submit", (e) => {
         const dat = data.address;
         msgOne.textContent = dat.toUpperCase();
         msgTwo.textContent = data.weather_news;
+        weather_image.src = data.weather_img;
+        // console.log(data.weather_img);
       }
     });
   });
